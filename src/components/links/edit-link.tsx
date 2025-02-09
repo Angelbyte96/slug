@@ -76,7 +76,7 @@ const EditLink = (props: EditLinkProps) => {
 
       // If not any changes in the tags, return:
       toast.success("Link edited successfully.", {
-        description: `Url: https://slug-six.vercel.app/${values.slug}`,
+        description: `Url: https://link.angelbyte.dev/${values.slug}`,
         duration: 10000,
         closeButton: true,
       });

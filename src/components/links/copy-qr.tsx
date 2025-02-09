@@ -64,7 +64,7 @@ const CopyQR = ({ linkInfo }: CopyQRProps) => {
             id="qr-code"
             size={128}
             style={{ height: "auto" }}
-            value={`https://slug-six.vercel.app/${linkInfo.slug}`}
+            value={`https://link.angelbyte.dev/${linkInfo.slug}`}
             viewBox={`0 0 128 128`}
           />
         </div>
