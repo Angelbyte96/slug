@@ -22,17 +22,17 @@ const Footer = (props: FooterProps) => {
           <Heart
             size={14}
             className="text-red-500 group-hover:transform group-hover:animate-pulse"
-          />
-          <ExternalLink
+          /><p>Agradecimiento a Pheralb</p>
+          {/* <ExternalLink
             href="https://create.t3.gg/"
             className="flex items-center space-x-1"
           >
             <p>Made by Pablo using</p>
             <T3Logo className="h-4 w-4" />
             <ArrowUpRight size={14} />
-          </ExternalLink>
+          </ExternalLink> */}
         </div>
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <XLogo className="h-3 w-3" />
           <ExternalLink
             href="https://twitter.com/pheralb_"
@@ -41,7 +41,7 @@ const Footer = (props: FooterProps) => {
             <p className="hidden md:block">Twitter</p>
             <ArrowUpRight size={14} />
           </ExternalLink>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
