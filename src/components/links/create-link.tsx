@@ -115,7 +115,7 @@ export function CreateLink(props: CreateLinkProps) {
       }
 
       toast.success("Link created successfully", {
-        description: `Url: https://link.angelbyte.dev/${values.slug}`,
+        description: `Url: https://angelbyte.link/${values.slug}`,
         duration: 10000,
         closeButton: true,
       });
