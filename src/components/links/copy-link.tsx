@@ -12,7 +12,7 @@ interface CopyLinkProps {
 
 const CopyLinkDropdown = (props: CopyLinkProps) => {
   const [, copy] = useCopyToClipboard();
-  const url = "https://angelbyte.link/";
+  const url = "https://angelbyte.link";
 
   const handleCopy = (text: string) => () => {
     copy(text)
