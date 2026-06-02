@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   Card,
   CardContent,
@@ -24,7 +25,9 @@ const AuthLoginPage = () => {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4 duration-500 animate-in fade-in-30">
-        <SocialLogin />
+        <Suspense>
+          <SocialLogin />
+        </Suspense>
       </CardContent>
     </Card>
   );

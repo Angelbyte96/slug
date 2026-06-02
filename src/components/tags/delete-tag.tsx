@@ -50,7 +50,7 @@ const DeleteTag = ({ trigger, tag }: DeleteTagProps) => {
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Delete "{tag.name}" tag</DialogTitle>
+          <DialogTitle>Delete &quot;{tag.name}&quot; tag</DialogTitle>
           <DialogDescription>
             Delete the tag will not delete the links associated with it.
           </DialogDescription>

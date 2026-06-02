@@ -1,6 +1,6 @@
 import Footer from "@/components/layout/footer";
 import { GithubLogo } from "@/components/icons/logos";
-import { buttonVariants } from "@/ui/button";
+import { buttonVariants } from "@/ui/button-variants";
 import ExternalLink from "@/ui/external-link";
 import { TypographyH1, TypographyP } from "@/ui/typography";
 import { LinkIcon } from "lucide-react";
@@ -19,7 +19,7 @@ export default async function Home() {
         </TypographyH1>
         <TypographyP className="max-w-[75ch] text-sm duration-700 animate-in fade-in-5 slide-in-from-top-2 md:text-base [&:not(:first-child)]:mt-6">
           Slug is an open-source platform that allows you to create, manage, and
-          share short links with ease. It's fast, secure, and easy to use.
+          share short links with ease. It&apos;s fast, secure, and easy to use.
         </TypographyP>
         <div className="mt-8 flex items-center justify-center duration-700 animate-in fade-in-30 md:space-x-3 space-x-2">
           <Link

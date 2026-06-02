@@ -1,12 +1,12 @@
 import Footer from "@/components/layout/footer";
-import { buttonVariants } from "@/ui/button";
+import { buttonVariants } from "@/ui/button-variants";
 import ExternalLink from "@/ui/external-link";
 import { ArrowUpRight, HomeIcon } from "lucide-react";
 import { headers } from "next/headers";
 import Link from "next/link";
 
 const NotFoundPage = async () => {
-  const headersList = headers();
+  const headersList = await headers();
   const domain = headersList.get("host");
   return (
     <>

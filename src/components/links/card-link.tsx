@@ -1,3 +1,5 @@
+"use client";
+
 import type { LinkTags, Links, Tags } from "@prisma/client";
 
 import { formatDate } from "@/utils/formatDate";

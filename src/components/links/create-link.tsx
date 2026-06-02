@@ -232,7 +232,7 @@ export function CreateLink(props: CreateLinkProps) {
               ) : (
                 <div className="flex items-center justify-center space-x-2 rounded-md border border-neutral-200 py-3 text-sm dark:border-neutral-800">
                   <TagsIcon size={16} />
-                  <p className="font-medium">You don't have any tag created.</p>
+                  <p className="font-medium">You don&apos;t have any tag created.</p>
                 </div>
               )}
             </div>

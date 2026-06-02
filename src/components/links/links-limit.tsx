@@ -1,4 +1,6 @@
-import { buttonVariants } from "@/ui/button";
+"use client";
+
+import { buttonVariants } from "@/ui/button-variants";
 import {
   Tooltip,
   TooltipContent,

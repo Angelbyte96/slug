@@ -118,3 +118,4 @@ export const TypographyListOl = forwardRef<
     />
   );
 });
+TypographyListOl.displayName = "TypographyListOl";

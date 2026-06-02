@@ -1,8 +1,9 @@
-const CheckSlug = ({ params }: { params: { slug: string } }) => {
+const CheckSlug = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   return (
     <div className="flex flex-col space-y-2">
       <h2>URL Check</h2>
-      <p>Slug: {params.slug}</p>
+      <p>Slug: {slug}</p>
     </div>
   );
 };

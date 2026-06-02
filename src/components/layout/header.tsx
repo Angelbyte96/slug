@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/utils";
 
-import { buttonVariants } from "@/ui/button";
+import { buttonVariants } from "@/ui/button-variants";
 import ExternalLink from "@/ui/external-link";
 import { Badge } from "@/ui/badge";
 

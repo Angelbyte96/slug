@@ -44,6 +44,7 @@ const DeleteLink = ({ link, trigger }: DeleteLinkProps) => {
 
   const form = useForm<z.infer<typeof DeleteLinkSchema>>({
     resolver: zodResolver(DeleteLinkSchema),
+    defaultValues: { slug: "" },
   });
 
   const handleDelete = async (values: z.infer<typeof DeleteLinkSchema>) => {

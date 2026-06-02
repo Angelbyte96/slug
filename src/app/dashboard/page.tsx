@@ -4,9 +4,8 @@ import { getLinksAndTagsByUser } from "@/server/queries";
 
 import CardLink from "@/components/links/card-link";
 import SearchLinks from "@/components/links/search-link";
-import { CreateLink } from "@/components/links/create-link";
-import { Button } from "@/ui/button";
-import { PackageOpenIcon, PlusIcon, SparklesIcon } from "lucide-react";
+import DashboardCreateLink from "@/components/links/dashboard-create-link";
+import { PackageOpenIcon, SparklesIcon } from "lucide-react";
 import SearchTag from "@/components/tags/search-tags";
 import LinksLimit from "@/components/links/links-limit";
 import UserBlocked from "@/components/settings/userBlocked";
@@ -18,14 +17,15 @@ export const metadata: Metadata = {
 const DashboardPage = async ({
   searchParams,
 }: {
-  searchParams?: {
+  searchParams?: Promise<{
     search?: string;
     tag?: string;
-  };
+  }>;
 }) => {
   const data = await getLinksAndTagsByUser();
-  const searchLink = searchParams?.search;
-  const searchTag = searchParams?.tag;
+  const sp = await searchParams;
+  const searchLink = sp?.search;
+  const searchTag = sp?.tag;
 
   if (!data) {
     return <div>Error</div>;
@@ -60,12 +60,11 @@ const DashboardPage = async ({
             tagSelected={searchTag!}
             tagName={searchTag}
           />
-          <CreateLink tags={data.tags}>
-            <Button>
-              <PlusIcon size={16} />
-              <span className="hidden md:block">Create Link</span>
-            </Button>
-          </CreateLink>
+          <DashboardCreateLink
+            tags={data.tags}
+            label="Create Link"
+            hideTextOnMobile
+          />
         </div>
       </header>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-1 lg:grid-cols-2">
@@ -103,16 +102,11 @@ const DashboardPage = async ({
               {searchTag ? "No links found with this tag" : "No links found"}
             </p>
           )}
-          <CreateLink tags={data.tags} slug={searchLink}>
-            <Button variant="outline">
-              <PlusIcon size={14} />
-              <span>
-                {searchLink
-                  ? `Create a link with ${searchLink} slug`
-                  : "Create a new link"}
-              </span>
-            </Button>
-          </CreateLink>
+          <DashboardCreateLink
+            tags={data.tags}
+            slug={searchLink}
+            variant="outline"
+          />
         </div>
       )}
     </main>
